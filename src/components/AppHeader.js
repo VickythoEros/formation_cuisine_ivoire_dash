@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { IconButton, } from 'rsuite';
-import AlignCenterIcon from '@rsuite/icons/legacy/AlignCenter';
+import AlignJustifyIcon from '@rsuite/icons/legacy/AlignJustify';
 import {
   CContainer,
   CHeader,
@@ -10,7 +10,6 @@ import {
   CHeaderToggler,
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
-import { cilMenu } from '@coreui/icons'
 
 import { AppHeaderDropdown } from './header/index'
 import { logo } from 'src/assets/brand/logo'
@@ -20,7 +19,7 @@ const AppHeader = () => {
   const sidebarShow = useSelector((state) => state.sidebarShow)
 
   return (
-    <CHeader position="sticky" className="mb-4">
+    <CHeader position="sticky" className="mb-4 shadow py-4">
       <CContainer fluid>
         <CHeaderToggler
           className="ps-1"
@@ -29,7 +28,7 @@ const AppHeader = () => {
            <IconButton 
               className=""
               onClick={() => dispatch({ type: 'set', sidebarShow: !sidebarShow })} 
-              icon={<AlignCenterIcon />} 
+              icon={<AlignJustifyIcon />} 
               color="green" 
               appearance="primary" 
               circle />
