@@ -26,10 +26,11 @@ const AppHeader = () => {
           onClick={() => dispatch({ type: 'set', sidebarShow: !sidebarShow })}
         >
            <IconButton 
-              className=""
+              className="q-button-primary"
               onClick={() => dispatch({ type: 'set', sidebarShow: !sidebarShow })} 
               icon={<AlignJustifyIcon />} 
-              color="green" 
+              
+               
               appearance="primary" 
               circle />
         </CHeaderToggler>
@@ -37,7 +38,7 @@ const AppHeader = () => {
      
 
         <CHeaderBrand className="mx-auto d-md-none" to="/">
-          <CIcon icon={logo} height={48} alt="Logo" />
+          <CIcon icon={logo} height={60} alt="Logo" />
         </CHeaderBrand>
         {/* <CHeaderNav className="d-none d-md-flex me-auto">
           <CNavItem>

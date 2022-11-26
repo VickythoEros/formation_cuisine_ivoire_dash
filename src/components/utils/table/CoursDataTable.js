@@ -57,11 +57,21 @@ const CoursDataTable = () => {
 
     const renderHeader = () => {
         return (
-            <div className="flex justify-content-between align-items-center">
-                <span className="p-input-icon-left">
-                    <i className="pi pi-search" />
-                    <InputText value={globalFilterValue} onChange={onGlobalFilterChange} placeholder="Keyword Search" />
-                </span>
+            <div className='d-flex justify-content-between align-items-center'>
+                <div className="flex justify-content-between align-items-center">
+                    <span className="p-input-icon-left">
+                        <i className="pi pi-search" />
+                        <InputText value={globalFilterValue} onChange={onGlobalFilterChange} placeholder="Rechercher un cours" />
+                    </span>
+                </div>
+                <div className=''>
+                    <Button  
+                        onClick={()=>navigate('/cours/ajout_cours',{replace:true})}
+                        className="p-button-rounded q-button-primary"
+                        label="Ajouter un Cours" 
+                        icon="pi pi-plus" 
+                        iconPos="left" />
+                </div>
             </div>
         )
     }
@@ -96,13 +106,13 @@ const CoursDataTable = () => {
                 <Button
                     onClick={()=>navigate(`/cours/1`)}
                     icon="pi pi-eye" 
-                    className="p-button-rounded p-button-info p-button-sm py-1 mx-2" 
+                    className="p-button-rounded q-button-primary p-button-sm py-1 mx-2" 
                     aria-label="Voir"  
                     label="Voir" />
                 {/* <Button icon="pi pi-file-edit" className="p-button-rounded p-button-warning p-button-sm py-1 mx-2" aria-label="Editer" label="Editer" /> */}
                 <Button 
                     icon="pi pi-times" 
-                    className="p-button-rounded p-button-danger p-button-sm py-1 mx-2" 
+                    className="p-button-rounded q-button-danger p-button-sm py-1 mx-2" 
                     aria-label="Supprimer" 
                     label="Supprimer"
                      />

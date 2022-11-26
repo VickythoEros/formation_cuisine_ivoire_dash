@@ -1,14 +1,36 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* background:#093e2a; */
+:root{
+  --btn-primary-color: #044222;
+  --btn-danger-color: #b9332c;
+  --white-color: #faf6f6;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app-quizine-main{
+  background-image: linear-gradient(to bottom, rgba(44, 39, 34, 0.775), rgba(48, 46, 44, 0)), url("src/assets/images/main/bg_main.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+   
+}
+
+.q-button-primary{
+  color: var(--white-color);
+  background: var(--btn-primary-color);
+}
+
+button.q-button-primary:hover{
+  color: var(--white-color);
+  background: var(--btn-primary-color) !important;
+}
+
+.q-button-danger{
+  color: var(--white-color);
+  background: var(--btn-danger-color);
+  border:  var(--btn-danger-color);
+}
+
+button.q-button-danger:hover{
+  color: var(--white-color);
+  background: var(--btn-danger-color) !important;
+  border:  var(--btn-danger-color);
 }

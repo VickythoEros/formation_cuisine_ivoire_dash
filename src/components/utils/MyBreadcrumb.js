@@ -75,7 +75,7 @@ const MyAppBreadcrumb = () => {
     return(
         <>
          <section className="breadcrumb-section ">
-            <div className='d-flex justify-content-start align-items-center'>
+            <div className='d-flex justify-content-start align-items-center text-white'>
                 <CIcon style={{height:'45px'}} icon= {currentTitle?.icon} customClassName="nav-icon" />
                 <h3 className='ms-3' > {currentTitle?.title} </h3>
             </div>
@@ -84,7 +84,7 @@ const MyAppBreadcrumb = () => {
                     {
                         listBreadcrumbPath.map((breadcrumb,index)=>{
                             return(
-                                <NavLink key={index} to={breadcrumb.to} > {breadcrumb.title} </NavLink>
+                                <NavLink className="text-white text-decoration-none"  key={index} to={breadcrumb.to} > {breadcrumb.title} </NavLink>
                             )
                         })
                     }

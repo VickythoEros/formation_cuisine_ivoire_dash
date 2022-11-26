@@ -9,7 +9,7 @@ import { AppContent, AppSidebar, AppHeader } from '../components/index'
 
 const DefaultLayout = () => {
   return (
-    <div>
+    <div className='app-quizine-main' >
       <AppSidebar />
       <div className="wrapper d-flex flex-column min-vh-100 " 
       style={{
@@ -20,7 +20,7 @@ const DefaultLayout = () => {
       }}
        >
         <AppHeader />
-        <div className="body flex-grow-1 px-3">
+        <div className="body flex-grow-1 px-3 ">
           <MyAppBreadcrumb />
           <AppContent />
         </div>
