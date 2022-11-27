@@ -2,13 +2,13 @@ import React from 'react';
 import { Button } from 'primereact/button';
 import { Formik, Form  } from 'formik'; 
 import * as Yup from 'yup';
-import { MySelectInput, MyTextareaInput, MyTextInput,MyNumberInput } from 'src/components/utils/FormInputs';
-import { FormFile } from 'src/components/utils/FormFile';
+import { MySelectInputDropdown, MyTextareaInput, MyTextInput } from 'src/components/utils/FormInputs';
+import { FormFileLeçons } from 'src/components/utils/FormFileLeçons';
 
 
 
 
-export default function FormAjoutCours(){
+export default function FormAjoutLeçonsInfo(){
     const cities = [
         { name: 'Rome', code: 'RM' },
         { name: 'London', code: 'LDN' },
@@ -45,37 +45,36 @@ export default function FormAjoutCours(){
                 }}>
 
             <Form>
+                <MySelectInputDropdown
+                    options={cities}
+                    optionLabel="name" 
+                    inputId="cours"
+                    label="Selectionnez un cours ?"
+                    name="cours"
+                    placeholder="Selectionnez " 
+                    filter
+                />
+
                 <MyTextInput
-                    label="Titre du cours"
+                    label="Titre de la leçon"
                     name="titre"
                     type="text"
-                    placeholder="Préparation de la sauce graine"
+                    placeholder="Les ingrédients de bases"
                 />
                 <MyTextareaInput
-                    label="Entrez une description"
+                    label="Entrez une description de la leçon"
                     name="description"
                     rows={5} 
                     placeholder="Sauce à base de graine..."
                 />
-                <MySelectInput 
-                    options={cities}
-                    optionLabel="name" 
-                    inputId="ethnie"
-                    label="A quel ethnie est attribué ce plat ?"
-                    name="ethnie"
-                    placeholder="Selectionnez " 
-                    filter
-                />
-                <MyTextInput 
-                    label="Combien d'heures avez-vous mis pour la préparation de ce plat ?"
-                    name="duree"
-                    type="text"
-                    placeholder="3 " 
-                />
-                <FormFile />
-                <div className='text-end py-5'>
+               
+               
+                <FormFileLeçons 
+
+                 />
+                {/* <div className='text-end py-5'>
                     <Button type="submit" className='q-button-primary p-button-rounded' label="Enregistrez le cours" icon="pi pi-check" />
-                </div>
+                </div> */}
             </Form>
             </Formik>
         </>

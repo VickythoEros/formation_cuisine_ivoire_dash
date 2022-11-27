@@ -29,7 +29,7 @@ const navLinksElements = {
         title : "Cours",
         icon : cilDescription
     },
-    leçons:{
+    lecons:{
         title : "Leçons",
         icon : cilNotes
     },
@@ -68,7 +68,6 @@ const MyAppBreadcrumb = () => {
             }
         })
         setCurrentTitle(navLinksElements[realPath[1].title])
-        console.log(navLinksElements[realPath[1].title])
         setListBreadcrumbPath(realPath)
     },[location])
    

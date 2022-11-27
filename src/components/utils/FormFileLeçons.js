@@ -7,7 +7,7 @@ import { Button } from 'primereact/button';
 import { Tooltip } from 'primereact/tooltip';
 import { Tag } from 'primereact/tag';
 
-export const FormFile = () => {
+export const FormFileLeçons = () => {
     const [totalSize, setTotalSize] = useState(0);
     const toast = useRef(null);
     const fileUploadRef = useRef(null);
@@ -78,21 +78,21 @@ export const FormFile = () => {
         return (
             <div className="flex align-items-center flex-column">
                 <i className="pi pi-image mt-3 p-5" style={{'fontSize': '5em', borderRadius: '50%', backgroundColor: 'var(--surface-b)', color: 'var(--surface-d)'}}></i>
-                <span style={{'fontSize': '1.2em', color: 'var(--text-color-secondary)'}} className="my-5">Drag and Drop Image Here</span>
+                <span style={{'fontSize': '1.2em', color: 'var(--text-color-secondary)'}} className="my-5">Glissez une vidéo ici</span>
             </div>
         )
     }
 
  
 
-    const chooseOptions = {icon: 'pi pi-fw pi-images',  label:`Choisissez une image `,  className: 'custom-choose-btn p-button-rounded p-button-outlined'};
-    const uploadOptions = {icon: 'pi pi-fw pi-cloud-upload', label:"Chargez l'image",  className: 'custom-upload-btn p-button-success p-button-rounded p-button-outlined'};
-    const cancelOptions = {icon: 'pi pi-fw pi-times',  label:"Supprimez l'image",  className: 'custom-cancel-btn p-button-danger p-button-rounded p-button-outlined'};
+    const chooseOptions = {icon: 'pi pi-fw pi-images',  label:`Choisissez une vidéo `,  className: 'custom-choose-btn p-button-rounded p-button-outlined'};
+    const uploadOptions = {icon: 'pi pi-fw pi-cloud-upload', label:"Chargez la vidéo",  className: 'custom-upload-btn p-button-success p-button-rounded p-button-outlined'};
+    const cancelOptions = {icon: 'pi pi-fw pi-times',  label:"Supprimez la vidéo",  className: 'custom-cancel-btn p-button-danger p-button-rounded p-button-outlined'};
 
     return (
         <div className='px-4 py-5 shadow bg-white border-rounded card '>
             <h4 className='h4 fw-bolder' >
-                Selectionnez une image pour votre cours
+                Selectionnez une vidéo pour la leçon
             </h4>
             <Toast ref={toast}></Toast>
 
